@@ -11,7 +11,7 @@
   })
 </script>
 
-<div class="container" style="padding: 50px 0 100px 0;">
+<div class="container pt-[50px] pb-[100px]">
   {#if $user}
   <Profile />
   {:else}
