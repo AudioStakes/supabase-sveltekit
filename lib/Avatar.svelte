@@ -59,15 +59,15 @@
     use:downloadImage
     {src}
     alt="Avatar"
-    class="avatar image"
+    class="my-1"
     style="height: {size}; width: {size};"
   />
   {:else}
-  <div class="avatar no-image" style="height: {size}; width: {size};" />
+  <div style="height: {size}; width: {size};" />
   {/if}
 
   <div style="width: {size};">
-    <label class="btn btn-primary btn-block mt-1" for="single">
+    <label class="btn btn-primary btn-block" for="single">
       {uploading ? 'Uploading ...' : 'Upload'}
     </label>
     <input

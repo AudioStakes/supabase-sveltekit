@@ -18,20 +18,20 @@
   }
 </script>
 
-<form class="row flex-center flex" on:submit|preventDefault="{handleLogin}">
-  <div class="col-6 form-widget">
-    <h1 class="header">Supabase + Svelte</h1>
-    <p class="description">Sign in via magic link with your email below</p>
+<form on:submit|preventDefault="{handleLogin}">
+  <div class="flex flex-col space-y-4">
+    <h1>Supabase + Svelte</h1>
+    <p>Sign in via magic link with your email below</p>
     <div>
       <input
-        class="inputField"
+        class="input input-bordered input-sm w-full mt-1"
         type="email"
         placeholder="Your email"
         bind:value="{email}"
       />
     </div>
     <div>
-      <input type="submit" class='button block' value={loading ? "Loading" :
+      <input type="submit" class="btn btn-block btn-outline" value={loading ? "Loading" :
       "Send magic link"} disabled={loading} />
     </div>
   </div>
