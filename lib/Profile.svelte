@@ -74,29 +74,28 @@
 
 <form
   use:getProfile
-  class="form-widget"
   on:submit|preventDefault="{updateProfile}"
+  class="flex flex-col space-y-4"
 >
   <Avatar bind:path="{avatar_url}" on:upload="{updateProfile}" />
   <div>
-    <label for="email">Email</label>
-    <input id="email" type="text" value="{$user.email}" disabled />
+    <label for="email" class="label-text">Email</label>
+    <input id="email" class="input input-bordered input-sm w-full mt-1" type="text" value="{$user.email}" disabled />
   </div>
   <div>
-    <label for="username">Name</label>
-    <input id="username" type="text" bind:value="{username}" />
+    <label for="username" class="label-text">Name</label>
+    <input id="username" class="input input-bordered input-sm w-full mt-1" type="text" bind:value="{username}" />
   </div>
   <div>
-    <label for="website">Website</label>
-    <input id="website" type="website" bind:value="{website}" />
-  </div>
-
-  <div>
-    <input type="submit" class="button block primary" value={loading ? 'Loading ...' : 'Update'} disabled={loading}/>
+    <label for="website" class="label-text">Website</label>
+    <input id="website" class="input input-bordered input-sm w-full mt-1" type="website" bind:value="{website}" />
   </div>
 
   <div>
-    <button class="button block" on:click="{signOut}" disabled="{loading}">
+    <input type="submit" class="btn btn-primary btn-block" value={loading ? 'Loading ...' : 'Update'} disabled={loading}/>
+  </div>
+  <div>
+    <button class="btn btn-block btn-outline" on:click="{signOut}" disabled="{loading}">
       Sign Out
     </button>
   </div>

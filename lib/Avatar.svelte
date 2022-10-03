@@ -67,7 +67,7 @@
   {/if}
 
   <div style="width: {size};">
-    <label class="button primary block" for="single">
+    <label class="btn btn-primary btn-block mt-1" for="single">
       {uploading ? 'Uploading ...' : 'Upload'}
     </label>
     <input
